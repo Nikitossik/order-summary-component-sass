@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <picture>
+    <source srcset="./assets/pattern-background-desktop.svg" media="(min-width: 75em)">
+    <img class="decore-img" src="./assets/pattern-background-mobile.svg" alt="ackground image decore">
+  </picture>
+  <main class="wrapper">
+    <div class="container">
+      <div class="card">
+        <div class="card__image">
+          <img src="./assets/illustration-hero.svg" alt="a girl dancing with headphones">
+        </div>
+        <div class="card__body">
+          <h2 class="card__title">
+            Order Summary
+          </h2>
+          <div class="card__text">
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </div>
+          <div class="card-plan">
+            <div class="card-plan__icon">
+              <img src="./assets/icon-music.svg" alt="music icon">
+            </div>
+            <div class="card-plan__text">
+              <h3 class=" card-plan__title">Annual Plan</h3>
+              $59.99/year
+            </div>
+            <a href="#" class="card-plan__link">Change</a>
+          </div>
+          <a href="#" class="btn card__btn">Proceed to Payment</a>
+          <a href="#" class="card__cancel">Cancel Order</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Mykyta Rakhmanyi</a>.
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>

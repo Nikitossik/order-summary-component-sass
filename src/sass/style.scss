@@ -1,0 +1,141 @@
+@use 'reset';
+@use 'functions'as *;
+@use 'variables'as *;
+
+
+body {
+    font-family: 'Red Hat Display',
+        sans-serif;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    color: $neu-desaturated-blue;
+    background: $primary-pale-blue;
+    position: relative;
+}
+
+.decore-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.container {
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    box-shadow: 0px 2.5rem 2.5rem -1.25rem rgba(13, 48, 189, 0.151826);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    max-width: 28.125rem;
+
+    &__image img {
+        width: 100%;
+    }
+
+    &__body {
+        padding: fluid(32px, 48px, $clamp-br-min, $clamp-br-max) {
+            top: fluid(24px, 45px, $clamp-br-min, $clamp-br-max);
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: fluid(22px, 28px, $clamp-br-min, $clamp-br-max);
+        text-align: center;
+        color: $neu-dark-blue;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+
+        @media (min-width: $clamp-br-min) {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+    }
+
+    &__cancel {
+        font-weight: 900;
+    }
+
+    &__btn {
+        margin-bottom: fluid(24px, 32px, $clamp-br-min, $clamp-br-max);
+    }
+
+    &-plan {
+        background: $neu-pale-blue;
+        border-radius: $border-radius-sm;
+        padding: fluid(16px, 24px, $clamp-br-min, $clamp-br-max);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: fluid(24px, 32px, $clamp-br-min, $clamp-br-max);
+
+        &__icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &__text {
+            flex: 1 1 auto;
+            text-align-last: left;
+
+            @media (min-width: $clamp-br-min) {
+                font-size: 1rem;
+            }
+        }
+
+        &__title {
+            font-weight: 900;
+            font-size: 0.875rem;
+            color: $neu-dark-blue;
+            margin-bottom: 3px;
+        }
+
+        &__link {
+            font-weight: 700;
+            font-size: 0.8175rem;
+            color: $primary-bright-blue;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+}
+
+.btn {
+    display: block;
+    padding: 0.9375rem 0;
+    text-align: center;
+    font-weight: 900;
+    color: #FFFFFF;
+    background: #382AE1;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    border-radius: $border-radius-sm;
+}
+
+.attribution {
+    font-size: .75rem;
+    text-align: center;
+    color: #000;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
