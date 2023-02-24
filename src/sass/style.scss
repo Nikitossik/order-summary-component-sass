@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'reset';
 @use 'functions'as *;
 @use 'variables'as *;
@@ -73,6 +74,13 @@ body {
 
     &__cancel {
         font-weight: 900;
+        transition: .3s color ease;
+
+        @media (min-width: $clamp-br-max) {
+            &:hover {
+                color: $neu-dark-blue;
+            }
+        }
     }
 
     &__btn {
@@ -115,6 +123,14 @@ body {
             color: $primary-bright-blue;
             text-decoration: underline;
             text-underline-offset: 3px;
+            transition: .3s color ease;
+
+            @media (min-width: $clamp-br-max) {
+                &:hover {
+                    color: color.scale($primary-bright-blue, $lightness: 31.3%);
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
@@ -125,9 +141,24 @@ body {
     text-align: center;
     font-weight: 900;
     color: #FFFFFF;
-    background: #382AE1;
+    background-color: $primary-bright-blue;
     box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
     border-radius: $border-radius-sm;
+    transition: .3s background-color ease;
+
+    @media (min-width: $clamp-br-max) {
+        &:hover {
+            background-color: color.scale($primary-bright-blue, $lightness: 31.3%);
+        }
+    }
+
+    @media (max-width: $clamp-br-max) {
+
+        &:focus,
+        &:active {
+            background-color: color.scale($primary-bright-blue, $lightness: 31.3%);
+        }
+    }
 }
 
 .attribution {
